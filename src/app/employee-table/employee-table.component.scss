@@ -1,0 +1,129 @@
+// table{z-index: 22;}
+
+  /* בכפתור שלך */
+button.export-button {
+    margin-top: 10px; /* הגדר את המרווח שבין הכפתור לטבלה */
+  }
+  
+  /* או בכפתור שלך */
+  button.export-button {
+    position: absolute; /* הגדר את המיקום של הכפתור באופן יחסי או כפולת למסך */
+    top: 10px; /* מרווח מהחלק העליון של הדף */
+  }
+
+
+
+
+
+
+
+
+
+
+//   .dynamic-table {
+//     width: 100%;
+//     border-collapse: collapse;
+//   }
+  
+//   .dynamic-table th, .dynamic-table td {
+//     padding: 10px;
+//     text-align: center;
+//   }
+  
+//   .dynamic-table th {
+//     background-color: #808080; /* אפור */
+//     color: white;
+//   }
+  
+//   .dynamic-table tbody tr:nth-child(even) {
+//     background-color: #f2f2f2; /* אפור בהיר */
+//   }
+  
+//   .dynamic-table tbody tr:hover {
+//     background-color: #87CEEB; /* כחול רויאל */
+//   }
+  
+//   .action-buttons {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+  
+//   .edit-button, .delete-button {
+//     background-color: #FF69B4; /* וורוד */
+//     color: white;
+//     border: none;
+//     border-radius: 20px;
+//     padding: 8px;
+//     text-align: center;
+//     text-decoration: none;
+//     display: inline-block;
+//     font-size: 14px;
+//     margin: 2px 2px;
+//     transition-duration: 0.4s;
+//     cursor: pointer;
+//   }
+  
+//   .edit-button:hover, .delete-button:hover {
+//     background-color: #DB7093; /* וורוד כהה */
+//   }
+  
+//   .edit-button i, .delete-button i {
+//     font-size: 18px;
+//   }
+  
+
+
+
+
+
+
+
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

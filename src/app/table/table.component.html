@@ -1,0 +1,92 @@
+<p>table works!</p>
+<!-- <button type="button" (click)="onClickAddEmployee()">הוספת עובד</button> -->
+<div>
+  <input type="text" [formControl]="searchControl" placeholder="חיפוש..."  (keyup)="applyFilter()">
+</div>
+<table>
+<table>
+    <caption>רשימת עובדים</caption>
+    <thead>
+        <tr>
+            <th>שם פרטי</th>
+            <th>שם משפחה</th>
+            <th>תעודת זהות</th>
+            <th>תאריך תחילת עבודה</th>
+        </tr>
+    </thead>
+    <ul>
+      <li *ngFor="let employee of employees">
+        {{ employee.firstName }} {{ employee.lastName }}
+      </li>
+    </ul>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td type="submit" (click)="onClickAdd()">{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <!-- <td>{{ employee.tz }}</td> -->
+           <!-- <td>{{ employee.startDate | date }}</td> -->
+           <td>
+            <!-- <button type="button" (click)="editEmployee(employee)">עריכה</button> -->
+            <td>
+            <section>
+                <!-- <div class="example-label">FAB</div> -->
+                <div class="example-button-row">
+                  <div class="example-flex-container">
+                    <div class="example-button-container">
+                      <button mat-fab color="primary" aria-label="Example icon button with a delete icon" type="button" (click)="deleteEmployee(employee)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </td>
+            <td>
+              <section>
+                <!-- <div class="example-label">FAB</div> -->
+                <div class="example-button-row">
+                  <div class="example-flex-container">
+                    
+                    <div class="example-button-container">
+                      <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+                        <mat-icon>bookmark</mat-icon>
+                      </button>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
+              </section>
+            <button type="button" (click)="deleteEmployee(employee)">מחיקה</button>
+        </td>
+          
+        </tr>
+    </tbody>
+</table>
+<div>
+    <!-- <button type="submit" (click)="deleteEmployee(employees)">להסרה</button> -->
+</div>
+
+<div *ngIf="selectedEmployee">
+  <div>{{ selectedEmployee.firstName }} {{ selectedEmployee.lastName }}</div>
+  <!-- <div>{{ selectedEmployee.startDate | date }}</div> -->
+  <!-- ניתן להוסיף כאן גם את רשימת התפקידים של העובד -->
+  <!-- <button (click)="saveChanges()">שמירה</button> -->
+  <button (click)="deleteEmployee(selectedEmployee)">מחיקה</button>
+  <!-- <button (click)="closeCard()">סגירה</button> -->
+</div>
+
+
+
+  <!-- כאן נוסיף את הטבלה שלך, עם אינטרפולציה ל filteredEmployees -->
+</table>
+<button (click)="changeTableColors()">שנה ערכת צבעים</button>
+<table [style.background-color]="tableBackgroundColor">
+  <thead>
+    <tr>
+      <th [style.background-color]="tableHeaderBackgroundColor" [style.color]="tableTextColor">שם פרטי</th>
+      <!-- כאן נוסיף את שאר התאים בכותרת הטבלה -->
+    </tr>
+  </thead>
+  <!-- כאן נוסיף את שאר תוכן הטבלה -->
+</table>

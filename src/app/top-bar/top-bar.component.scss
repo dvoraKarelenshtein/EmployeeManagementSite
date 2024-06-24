@@ -1,0 +1,14 @@
+.w{background-color:rgb(43, 40, 207) ;
+    width: 100%;
+    // background-color: rgb(43, 40, 207);
+    // width: 100%;
+    position: fixed; /* קבעת את הקטע במקום קבוע בחלק העליון של העמוד */
+    top: 0; /* כדי לוודא שה-topbar מצוי בראש העמוד */
+    left: 0;
+    right: 0;
+    z-index: 0; 
+    box-shadow: 2px 3px 3px rgba(33, 31, 37, 0.2);
+}
+h1,h3{text-align: center;
+ 
+}

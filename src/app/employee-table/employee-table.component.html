@@ -1,0 +1,138 @@
+<input [formControl]="search" placeholder="חיפוש..." >
+<div>
+  <table class="card-table">
+    <thead>
+      <tr>
+        <th>שם פרטי</th>
+        <th>שם משפחה</th>
+        <th>תעודת זהות</th>
+        <th>תאריך התחלה</th>
+        <th>פעולות</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of (employeeList|async)" >
+      <ng-container *ngIf="employee.statusEmployee===1">
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.tz}}</td>
+        <td>{{employee.firstWork| date:'short'}}</td>
+        <td>
+          <div class="action-buttons">
+            <button class="edit-button" (click)="editEmployee(employee)">עריכה</button>
+            <button class="delete-button" (click)="deleteEmployee(employee)">מחיקה</button>
+          </div>
+        </td>
+      </ng-container>
+      </tr>
+    </tbody>
+  </table>
+  
+
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>מספר עובד</th>
+      <th>שם פרטי</th>
+      <th>שם משפחה</th>
+      <th>תעודת זהות</th>
+      <th>תאריך התחלה</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of (employeeList|async)">
+      <td>{{employee.id}}</td>
+      <td>{{employee.firstName}}</td>
+      <td>{{employee.lastName}}</td>
+      <td>{{employee.tz}}</td>
+      <td>{{employee.firstWork| date:'short'}}</td>
+      <td><button (click)="editEmployee(employee)">עריכה</button></td>
+      <td><button (click)="deleteEmployee(employee)">מחיקה</button></td>
+
+      
+    </tr>
+  </tbody>
+
+</table> -->
+</div>
+<div>
+
+
+  <button (click)="exportToExcel()">ייצוא ל-Excel</button>
+
+</div>
+
+  
+<!-- קוד נוסף של הטבלה -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+<script>
+  exportToExcel() 
+  {
+    var table = document.querySelector('table');
+    var rows = table.querySelectorAll('tr');
+    var csv = [];
+    for (var i = 0; i < rows.length; i++) 
+    {
+      var row = [], cols = rows[i].querySelectorAll('td, th');
+      for (var j = 0; j < cols.length; j++) {
+        row.push(cols[j].innerText);
+      }
+      csv.push(row.join(','));
+    }
+    var csvContent = 'data:text/csv;charset=utf-8,' + csv.join('\n');
+    var encodedUri = encodeURI(csvContent);
+    var link = document.createElement('a');
+    link.setAttribute('href', encodedUri);
+    link.setAttribute('download', 'table.csv');
+    document.body.appendChild(link);
+    link.click();
+  }
+</script> -->
+<!-- <ul>
+    <li *ngFor="let employee of employeeList">
+      <div class="employee-card">
+        <div class="employee-name">
+          {{ employee.firstName }} {{ employee.lastName }}
+        </div>
+        <div class="employee-details">
+          <div class="employee-id">
+            מספר עובד: {{ employee.id }}
+          </div>
+          <div class="employee-tz">
+            תעודת זהות: {{ employee.tz }}
+          </div>
+          <div class="employee-start-date">
+            תאריך תחילת עבודה: {{ employee.startDate | date }}
+          </div>
+        </div>
+        <div class="employee-actions">
+          <button mat-fab color="primary" aria-label="Delete employee" (click)="deleteEmployee(employee)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul> -->
+
+<!-- <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" [value]="editedEmployee.firstName" (input)="editedEmployee.firstName = $event.target.value">
+  </div>
+  
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" [value]="editedEmployee.lastName" (input)="editedEmployee.lastName = $event.target.value">
+  </div>
+  
+  <div class="form-group">
+    <label for="tz">ID Number:</label>
+    <input type="text" id="tz" [value]="editedEmployee.tz" (input)="editedEmployee.tz = $event.target.value">
+  </div>
+  
+  <div class="form-group">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" [value]="editedEmployee.startDate | date:'yyyy-MM-dd'" (input)="editedEmployee.startDate = $event.target.valueAsDate">
+  </div>
+   -->

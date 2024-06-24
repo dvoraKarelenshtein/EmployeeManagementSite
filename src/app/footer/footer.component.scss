@@ -1,0 +1,23 @@
+.fo {
+    background-color: rgb(72, 72, 82);
+    width: 100%;
+    // background-color: rgb(43, 40, 207);
+    // width: 100%;
+    position: fixed;
+    /* קבעת את הקטע במקום קבוע בחלק העליון של העמוד */
+    bottom: 0;
+    /* כדי לוודא שה-topbar מצוי בראש העמוד */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    color: rgb(212, 203, 238);
+    text-align: center;
+    box-shadow: 2px 3px 3px rgba(33, 31, 37, 0.2);
+}
+
+// position: fixed;
+// bottom: 0;
+// width: 100%;
+// background-color: #333;
+// color: white;
+// padding: 20px;

@@ -1,0 +1,131 @@
+// table caption {
+//  margin-top: 10%;
+//   /* גודל גופן */
+//   font-weight: bold;
+//   /* משקל גופן */
+//   color: #333;
+//   /* צבע טקסט */
+//   margin-bottom: 10px;
+//   /* מרווח תחתון */
+//   text-align: center;
+//   /* יישור למרכז */
+//   text-transform: uppercase;
+//   /* שינוי לאותיות רישיות */
+//   border-bottom: 2px solid #333;
+//   /* קו תחתון */
+// }
+
+// table {
+//   align-items: center;
+//   margin: 0 auto;
+//   /* מרכז אופקי */
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// table {
+
+//   width: 90%;
+//   margin: 0 auto;
+//   /* זה יכניס את הטבלה למרכז העמוד */
+//   // width: 100%;
+//   border-collapse: collapse;
+// }
+
+// th,
+// td {
+//   padding: 12px 15px;
+//   text-align: center;
+//   border-bottom: 1px solid #ddd;
+// }
+
+// th {
+//   background-color: #f2f2f2;
+//   color: #333;
+// }
+
+// tr:hover {
+//   background-color: #f5f5f5;
+// }
+
+
+$table-background-color: #fff; // צבע רקע כללי של הטבלה
+$table-text-color: #333; // צבע טקסט כללי בטבלה
+$table-header-background-color: #f2f2f2; // צבע רקע לכותרת הטבלה
+$table-header-text-color: #333; // צבע טקסט לכותרת הטבלה
+$table-hover-background-color: #f5f5f5; // צבע רקע לשורה בעת העצירה
+$table-caption-color: #333; // צבע טקסט לכיתוב הטבלה
+
+// סגנון לכיתוב הטבלה
+table caption {
+  margin-top: 10%;
+  font-weight: bold;
+  color: $table-caption-color;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+}
+
+// סגנון לטבלה
+table {
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: $table-background-color;
+}
+
+// סגנון לכותרת הטבלה
+th {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  background-color: $table-header-background-color;
+  color: $table-header-text-color;
+}
+
+// סגנון לשורות בטבלה
+tr {
+  &:hover {
+    background-color: $table-hover-background-color;
+  }
+}
+
+// סגנון לתאים בטבלה
+// td {
+//   padding: 12px 15px;
+//   text-align: center;
+//   border-bottom: 1px solid #ddd;
+//   color: $table-text-color;
+// }
+// .table-background-color {
+//   background-color: $table-background-color ;
+// }
+
+// .table-text-color {
+//   color: $table-text-color ;
+// }
+
+// .table-header-background-color {
+//   background-color: $table-header-background-color ;
+// }
+
+// .table-header-text-color {
+//   color: $table-header-text-color ;
+// }
+
+// .table-hover-background-color {
+//   background-color: $table-hover-background-color ;
+// }
+
+// .table-caption-color {
+//   color: $table-caption-color ;
+// }

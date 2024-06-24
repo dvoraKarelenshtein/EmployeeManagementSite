@@ -1,0 +1,31 @@
+@{
+    var Contact_Name = Request["Name"];
+    var Contact_Email = Request["Email"];
+    var Contact_Subject = Request["Subject"];
+    var Contact_Message = Request["Message"];
+
+Mail.SmtpServer = "ck0774247457@gmail.com";
+Mail.SmtpPort = 587;
+Mail.EnableSsl = true;
+Mail.UserName = "Your Gmail User Name";
+Mail.Password = "Your Gmail Password";
+
+
+var MailBody = "New Message From " + Contact_Name +
+	 " regarding " + Contact_Subject;
+MailBody += "<br /><br />" + Contact_Message;
+
+Mail.Send(to: "you@email.com",
+        subject: "New Message from your website regarding " 
+	+ Contact_Subject, body: MailBody);
+    
+ }
+ <html> 
+<head> 
+    <title>Contact Me</title> 
+</head> 
+<body> 
+    <h1>Contact Me</h1>
+    <h2>@Contact_Name, Thanks for your comment!</h2>
+</body> 
+</html>
